@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Paragraph Shotgun 2</title>
+    <meta name="description" content="A tiny bookmarklet to let you blast away unwanted content." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <style>
+      *{
+        margin-top:0;
+      }
+      html{
+        background:#222;
+      }
+      body{
+        font-family:sans-serif;
+        max-width: 960px;
+        background:#eee;
+        padding: 20px;
+        margin:0;
+      }
+      p{
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Paragraph shotgun 2</h1>
+    <p>Paragraph shotgun is an experimental bookmarklet, its aim is to speed up the reading of documents by removing paragraphs with a simple click.</p>
+    <p>There are some limits to what you can kill:</p>
+    <ul>
+      <li>If you kill a link you're still directed to the page it links from.</li>
+      <li>If try to kill text outside of one of the supported tags it just won't die.</li>
+      <li>If you're on a page based on tables havoc can be unleashed as a &lt;td&gt; could contain alot more than a few words or numbers.</li>
+      <li>You need to have javascript enabled otherwise you've left your ammo at home.</li>
+    </ul>
+    <p>The shotgun is below simply drag and drop it into your bookmarks bar</p>
+    <p>
+      <a href='javascript:!function(){for(var e=document.querySelectorAll("p,li,td,th,h1,span,img,h2,h3,h4,h5"),t=0,h=e.length;h>t;++t){e[t].style.cursor="crosshair",e[t].addEventListener("click",function(){this.parentNode.removeChild(this)})}}();'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAAcCAMAAABCkfGzAAAB5lBMVEV0VA9ISEhFRUW0tLRbW1tfX19lZWViYmKfn5+ysrKzs7NZWVmwsLB3d3d2dnZ1dXVzc3NPT09VVVVcXFxJSUlERERQUFBxcXFLS0tSUlJvb28zMzO8vLxeXl6FhYVYWFh4eHhOTk5qamptbW1HR0eAgIBAQEBoaGjExMT+/v5GRkZ0dHR6enp7e3tRUVEgICB5eXmJiYlMTEw9PT06Ojq1tbVBQUH8/Pxubm6urq5ra2upqamNjY2SkpKCgoK2trZKSko5OTmqqqr4+PhTU1MoKCiLi4uTk5N8fHzc3NwyMjImJiY1NTUnJyeIiIhNTU2ioqIvLy+np6evr6+Ojo5mZmbGxsY+Pj5gYGBWVlaRkZFXV1fx8fFycnKDg4NwcHD7+/v39/f09PRsbGzu7u79/f0/Pz+srKzv7++YmJjIyMjS0tK3t7eBgYH29vY7OzsrKytCQkLJycni4uKdnZ1DQ0OGhobPz8/19fUwMDDy8vKZmZmKioro6OioqKixsbEAAABUVFTr6+ssLCx/f3+goKCQkJAZGRmrq6tpaWm+vr4lJSU8PDzn5+ciIiLg4ODf39/U1NTj4+P6+voXFxc0NDQODg59fX0FBQWVlZVjY2Pb29uHh4c2NjZdXV25ubne3t7///+g2nwkAAAAonRSTlP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBFTJRoAAACGklEQVR4Ae3VVW/bXBjAcZ/U0Pf1HDuOwWFmZoaUeWWGdu2YmZmZGbZ807matWXxJuUiuZiU35UvLP31WMfPgaqt96812o31wcnimf35/PT0ncXF/vcbTW+k7qUrx3xXcoVOSdgQimITD9WKOqDOHBK/CcYbaOzKsbB2rBChDJqlBbonqLLsNHd+TUyVSl3/SXZIOupMXdV3XeT/1ni59e3sAfcN8engUPmSn/Kddz7SoUolSWmtKLammcE49RcYkeAmNUZrbX2c2BcYAOwMY2eBBk6bqOte4++Nc/tOnph0IIJgB090Sa8CC7lQh/8wRd4KvHXkAwP+MKFUEuEAOwPJHR+gOJXKEhXKZRXHWaIqE4LbUNxpqG0YY6ZRHUtDtQTdkvAhbLaS9w2mTZvVas3aeB/BQH+Ab5IEIU5Kkj5+hU/b1pSB4gpl5rM1DQ8ByTlXjY6+UHIPeDeima/gagwVYckFSO5ocAKWYIga335Xg9IuxYvaOSqQjC6S5bVYtR8fuzZapPdWJadGvD0WjrEDyWeaiXvfdDdwdjFZAta6jMhjccSY/zQIXfh11PSHEuOZTOl/SYc7kXE/8DTQqP9WxlXzp0IwV932XD+73oz/PDJfW3j96u5w77Ci93JTd4ke/AzEY+bBVGp56+nH5ebuq2dDPwIsbHDvbtFO3JgTAyDomj3Swr17m3Wi+u4W73ZP+x6UaTfaje8xmnSN3P3cGwAAAABJRU5ErkJggg==" alt="<p>shotgun 2" title="paragraph shotgun 2"/>
+      </a>
+    </p>
+    <p>The shotgun is currently designed to kill smaller elements rather than big game like articles, sections, headers, footers, uls and so on.
+      The elements below are vulnerable:</p>
+    <ul>
+      <li>&lt;p&gt; a paragraph</li>
+      <li>&lt;li&gt; a list item</li>
+      <li>&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt; 5 different sizes of headings</li>
+      <li>&lt;span&gt; a selection of text</li>
+      <li>&lt;img&gt; images</li>
+      <li>&lt;td&gt;&lt;th&gt; table cells</li>
+    </ul>
+    <p>I originally wrote this project in jquery, injecting extra libraries and all kinds of shinnanegans.
+      It's now written in minified vanilla js and is super quick and easy to understand!</p>
+    <p>Below is a gist of the code and what it does:</p>
+    <script src="https://gist.github.com/atleastimtrying/655ad1208e8afca60b02.js"></script>
+    <p>All of the above is executed when you click on the shotgun above, or if you've stored it to your bookmark bar when you click the bookmark!</p>
+    <p>Paragraph Shotgun is written by Anders Fisher, a javascript sherpa from <a href="http://developermountain.co.uk">Developer Mountain</a>.</p>
+  </body>
+</html>
+
